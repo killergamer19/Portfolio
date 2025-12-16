@@ -13,7 +13,7 @@ FLOWISE_API_URL = os.getenv('FLOWISE_API_URL', 'http://localhost:3000')
 FLOWISE_CHATFLOW_ID = os.getenv('FLOWISE_CHATFLOW_ID', '')
 
 # Flowise API Configuration
-FLOWISE_PREDICTION_URL = "https://cloud.flowiseai.com/api/v1/prediction/b64b685f-68e5-455d-b71b-5818bbb03f4b"
+FLOWISE_PREDICTION_URL = os.getenv('FLOWISE_PREDICTION_URL', 'https://cloud.flowiseai.com/api/v1/prediction/b64b685f-68e5-455d-b71b-5818bbb03f4b')
 
 def query(payload):
     """Query the Flowise API"""
@@ -56,4 +56,5 @@ def health():
     return jsonify({'status': 'ok'}), 200
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    port = int(os.getenv('PORT', 5000))
+    app.run(debug=False, host='0.0.0.0', port=port)
