@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Chad RV Abcede | Frontend Developer & UI Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body class="bg-slate-950 text-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="navbar fixed top-0 w-full z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <div class="text-2xl font-bold gradient-text">CRA</div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-12">
+            <a href="#home" class="nav-link text-sm font-medium">Home</a>
+            <a href="#about" class="nav-link text-sm font-medium">About</a>
+            <a href="#projects" class="nav-link text-sm font-medium"
+              >Projects</a
+            >
+            <a href="#contact" class="nav-link text-sm font-medium">Contact</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-btn"
+              class="p-2 text-gray-100 hover:text-cyan-400"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+<!-- Hero Section -->
+<section
+  id="home"
+  class="min-h-screen flex items-center justify-center pt-20 pb-10 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+>
+  <!-- Animated Background Elements -->
+  <div
+    class="absolute top-20 -right-40 w-80 h-80 bg-cyan-500 opacity-5 rounded-full blur-3xl"
+  ></div>
+  <div
+    class="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 opacity-5 rounded-full blur-3xl"
+  ></div>
+
+  <div class="max-w-6xl w-full relative z-10">
+    <div class="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
+      <!-- Left: Profile Image -->
+      <div class="flex-1 flex justify-center lg:justify-start items-start">
+        <div class="relative group w-full max-w-xs lg:max-w-sm">
+          <!-- Glow Effect -->
+          <div
+            class="absolute -inset-3 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-3xl blur-3xl opacity-30 group-hover:opacity-50 transition duration-500"
+          ></div>
+          
+          <!-- Image Container - Controlled height -->
+          <div class="relative overflow-hidden rounded-2xl border-2 border-cyan-400 border-opacity-30 shadow-2xl h-[360px] lg:h-[420px]">
+            <img
+              src="{{ url_for('static', filename='chad.jpg') }}"
+              alt="Chad RV G. Abcede"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          
+          <!-- Decorative Corner Accents -->
+          <div class="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-cyan-400 rounded-tl-lg"></div>
+          <div class="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-cyan-400 rounded-tr-lg"></div>
+          <div class="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-cyan-400 rounded-bl-lg"></div>
+          <div class="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-cyan-400 rounded-br-lg"></div>
+        </div>
+      </div>
+
+      <!-- Right: Hero Content -->
+      <div class="flex-1">
+        <div class="mb-5">
+          <span
+            class="inline-block px-4 py-2 bg-cyan-500 bg-opacity-10 border border-cyan-500 border-opacity-30 rounded-full text-cyan-300 text-sm font-medium"
+          >
+            Welcome to my portfolio
+          </span>
+        </div>
+
+        <h1
+          class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-white"
+        >
+          Hi, I'm <span class="gradient-text">Chad RV G. Abcede</span>
+        </h1>
+
+        <p class="text-lg text-gray-300 mb-2 font-light">
+          Frontend Developer & Designer
+        </p>
+
+        <p
+          class="text-base text-gray-400 mb-8 leading-relaxed"
+        >
+          I craft beautiful, responsive, and user-centric web experiences using
+          modern frontend technologies. Specializing in React, JavaScript, and
+          Tailwind CSS to create interfaces that inspire.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 mb-8 lg:mb-0">
+          <a
+            href="#projects"
+            class="px-8 py-4 button-primary rounded-lg font-semibold text-center transition duration-300"
+          >
+            View My Work
+          </a>
+          <a
+            href="#contact"
+            class="px-8 py-4 border-2 border-gray-500 hover:border-cyan-400 text-gray-100 rounded-lg font-semibold text-center transition duration-300"
+          >
+            Get In Touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-950 to-slate-900"
+    >
+      <div class="max-w-7xl w-full mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl md:text-6xl font-bold mb-3">
+            About <span class="gradient-text">Me</span>
+          </h2>
+          <p class="text-gray-400 text-base max-w-2xl mx-auto">
+            Get to know my background, skills, and what drives my passion for
+            frontend development
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <!-- About Content -->
+          <div class="card-glass p-6">
+            <h3 class="text-xl font-bold text-white mb-1">
+              Chad RV G. Abcede
+            </h3>
+            <p class="text-cyan-400 font-semibold mb-3 text-sm">
+              Frontend Developer & Student
+            </p>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              I'm a dedicated student at University of Cebu, specializing in
+              frontend development. Passionate about creating beautiful,
+              responsive, and user-centric web applications that deliver
+              exceptional user experiences.
+            </p>
+          </div>
+
+          <!-- My Approach -->
+          <div class="card-glass p-6 border-l-4 border-cyan-400">
+            <h4 class="text-xl font-bold text-white mb-3">My Approach</h4>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              I combine clean code, modern design principles, and
+              user-centered thinking. Every project is an opportunity to
+              learn, innovate, and create interfaces that not only look great
+              but feel intuitive to use.
+            </p>
+          </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="card-glass p-8 border-t border-cyan-400 border-opacity-20">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="p-2 bg-cyan-500 bg-opacity-10 rounded-lg">
+              <svg
+                class="w-5 h-5 text-cyan-400"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white">Technical Skills</h3>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <!-- HTML5 -->
+            <div class="skill-badge flex flex-col items-center gap-2">
+              <svg class="w-8 h-8 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M3 2h18l-2.5 16.5-8.5 2.5-8-2.5L3 2zm7 8h8v2H10zm0-4h8v2H10zm0 8h4v2h-4z" />
+              </svg>
+              <span class="text-xs">HTML5</span>
+            </div>
+            <!-- CSS3 -->
+            <div class="skill-badge flex flex-col items-center gap-2">
+              <svg class="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M3 2h18l-2.5 16.5-8.5 2.5-8-2.5L3 2zm7 8h8v2H10zm0-4h8v2H10zm0 8h4v2h-4z" />
+              </svg>
+              <span class="text-xs">CSS3</span>
+            </div>
+            <!-- JavaScript -->
+            <div class="skill-badge flex flex-col items-center gap-2">
+              <svg class="w-8 h-8 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M3 3h18v18H3V3zm3 3v12h3V6H6zm5 0v12h3V6h-3zm5 0v12h3V6h-3z" />
+              </svg>
+              <span class="text-xs">JavaScript</span>
+            </div>
+            <!-- React -->
+            <div class="skill-badge flex flex-col items-center gap-2">
+              <svg class="w-8 h-8 text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="1" />
+                <path d="M12 3c-3.5 0-6.7 1-8.5 2.5-.8.8-1.2 1.8-1.2 3V15.5c0 1.2.4 2.2 1.2 3 1.8 1.5 5 2.5 8.5 2.5s6.7-1 8.5-2.5c.8-.8 1.2-1.8 1.2-3v-7c0-1.2-.4-2.2-1.2-3C18.7 4 15.5 3 12 3z" />
+              </svg>
+              <span class="text-xs">React</span>
+            </div>
+            <!-- Tailwind CSS -->
+            <div class="skill-badge flex flex-col items-center gap-2">
+              <svg class="w-8 h-8 text-cyan-300" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+              </svg>
+              <span class="text-xs">Tailwind</span>
+            </div>
+            <!-- Git -->
+            <div class="skill-badge flex flex-col items-center gap-2">
+              <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+              <span class="text-xs">Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-20">
+          <h2 class="text-5xl md:text-6xl font-bold mb-4">
+            Featured <span class="gradient-text">Projects</span>
+          </h2>
+          <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+            A selection of frontend projects showcasing my skills in design and
+            development
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1: E-Commerce Platform -->
+          <div
+            class="group card-glass overflow-hidden hover:border-cyan-400 transition duration-300"
+          >
+            <!-- Project Image -->
+            <div
+              class="relative h-48 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden flex items-center justify-center"
+            >
+              <div class="text-center text-gray-400 group-hover:scale-110 transition duration-500">
+                <svg class="w-16 h-16 mx-auto mb-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                </svg>
+                <p class="text-sm">E-Commerce</p>
+              </div>
+            </div>
+
+            <!-- Project Content -->
+            <div class="p-6">
+              <h3
+                class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition"
+              >
+                E-Commerce Platform
+              </h3>
+              <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                A fully responsive e-commerce website with product listings, shopping cart, and checkout functionality built with modern web technologies.
+              </p>
+
+              <!-- Tech Stack -->
+              <div class="mb-6">
+                <p
+                  class="text-xs text-gray-500 uppercase tracking-wider mb-3 font-semibold"
+                >
+                  Tech Stack
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-cyan-500 bg-opacity-10 text-cyan-300 text-xs rounded border border-cyan-500 border-opacity-30">React</span>
+                  <span class="px-3 py-1 bg-cyan-500 bg-opacity-10 text-cyan-300 text-xs rounded border border-cyan-500 border-opacity-30">Tailwind CSS</span>
+                  <span class="px-3 py-1 bg-cyan-500 bg-opacity-10 text-cyan-300 text-xs rounded border border-cyan-500 border-opacity-30">JavaScript</span>
+                </div>
+              </div>
+
+              <!-- View Project Link -->
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 text-cyan-400 font-semibold text-sm hover:text-cyan-300 transition group/link"
+              >
+                View Project
+                <svg
+                  class="w-4 h-4 group-hover/link:translate-x-1 transition"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2: Task Management App -->
+          <div
+            class="group card-glass overflow-hidden hover:border-cyan-400 transition duration-300"
+          >
+            <!-- Project Image -->
+            <div
+              class="relative h-48 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden flex items-center justify-center"
+            >
+              <div class="text-center text-gray-400 group-hover:scale-110 transition duration-500">
+                <svg class="w-16 h-16 mx-auto mb-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                </svg>
+                <p class="text-sm">Task Manager</p>
+              </div>
+            </div>
+
+            <!-- Project Content -->
+            <div class="p-6">
+              <h3
+                class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition"
+              >
+                Task Management App
+              </h3>
+              <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                An intuitive task management application with drag-and-drop functionality, priority levels, and real-time updates for team collaboration.
+              </p>
+
+              <!-- Tech Stack -->
+              <div class="mb-6">
+                <p
+                  class="text-xs text-gray-500 uppercase tracking-wider mb-3 font-semibold"
+                >
+                  Tech Stack
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-cyan-500 bg-opacity-10 text-cyan-300 text-xs rounded border border-cyan-500 border-opacity-30">React</span>
+                  <span class="px-3 py-1 bg-cyan-500 bg-opacity-10 text-cyan-300 text-xs rounded border border-cyan-500 border-opacity-30">CSS3</span>
+                  <span class="px-3 py-1 bg-cyan-500 bg-opacity-10 text-cyan-300 text-xs rounded border border-cyan-500 border-opacity-30">Firebase</span>
+                </div>
+              </div>
+
+              <!-- View Project Link -->
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 text-cyan-400 font-semibold text-sm hover:text-cyan-300 transition group/link"
+              >
+                View Project
+                <svg
+                  class="w-4 h-4 group-hover/link:translate-x-1 transition"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3: Weather Dashboard -->
+          <div
+            class="group card-glass overflow-hidden hover:border-cyan-400 transition duration-300"
+          >
+            <!-- Project Image -->
+            <div
+              class="relative h-48 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden flex items-center justify-center"
+            >
+              <div class="text-center text-gray-400 group-hover:scale-110 transition duration-500">
+                <svg class="w-16 h-16 mx-auto mb-2 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9.5M6 12a4 4 0 014-4h6a4 4 0 014 4M9 21h6a4 4 0 004-4v-6a4 4 0 00-4-4H9"></path>
+                </svg>
+                <p class="text-sm">Weather App</p>
+              </div>
+            </div>
+
+            <!-- Project Content -->
+            <div class="p-6">
+              <h3
+                class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition"
+              >
+                Weather Dashboard
+              </h3>
+              <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                A dynamic weather dashboard that displays real-time weather data with forecasts, location search, and beautiful weather-based UI themes.
+              </p>
+
+              <!-- Tech Stack -->
+              <div class="mb-6">
+                <p
+                  class="text-xs text-gray-500 uppercase tracking-wider mb-3 font-semibold"
+                >
+                  Tech Stack
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-cyan-500 bg-opacity-10 text-cyan-300 text-xs rounded border border-cyan-500 border-opacity-30">JavaScript</span>
+                  <span class="px-3 py-1 bg-cyan-500 bg-opacity-10 text-cyan-300 text-xs rounded border border-cyan-500 border-opacity-30">API</span>
+                  <span class="px-3 py-1 bg-cyan-500 bg-opacity-10 text-cyan-300 text-xs rounded border border-cyan-500 border-opacity-30">HTML/CSS</span>
+                </div>
+              </div>
+
+              <!-- View Project Link -->
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 text-cyan-400 font-semibold text-sm hover:text-cyan-300 transition group/link"
+              >
+                View Project
+                <svg
+                  class="w-4 h-4 group-hover/link:translate-x-1 transition"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 4: UI Design System -->
+          <div
+            class="group card-glass overflow-hidden hover:border-cyan-400 transition duration-300"
+          >
+            <!-- Project Image -->
+            <div
+              class="relative h-48 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden flex items-center justify-center"
+            >
+              <div class="text-center text-gray-400 group-hover:scale-110 transition duration-500">
+                <svg class="w-16 h-16 mx-auto mb-2 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                </svg>
+                <p class="text-sm">UI Design</p>
+              </div>
+            </div>
+
+            <!-- Project Content -->
+            <div class="p-6">
+              <h3
+                class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition"
+              >
+                UI Design System
+              </h3>
+              <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                A comprehensive design system with reusable components, typography scales, color palettes, and interactive documentation for consistent design patterns.
+              </p>
+
+              <!-- Tech Stack -->
+              <div class="mb-6">
+                <p
+                  class="text-xs text-gray-500 uppercase tracking-wider mb-3 font-semibold"
+                >
+                  Tech Stack
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-cyan-500 bg-opacity-10 text-cyan-300 text-xs rounded border border-cyan-500 border-opacity-30">Figma</span>
+                  <span class="px-3 py-1 bg-cyan-500 bg-opacity-10 text-cyan-300 text-xs rounded border border-cyan-500 border-opacity-30">Design Tokens</span>
+                  <span class="px-3 py-1 bg-cyan-500 bg-opacity-10 text-cyan-300 text-xs rounded border border-cyan-500 border-opacity-30">HTML/CSS</span>
+                </div>
+              </div>
+
+              <!-- View Project Link -->
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 text-cyan-400 font-semibold text-sm hover:text-cyan-300 transition group/link"
+              >
+                View Project
+                <svg
+                  class="w-4 h-4 group-hover/link:translate-x-1 transition"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 5: Social Media Dashboard -->
+          <div
+            class="group card-glass overflow-hidden hover:border-cyan-400 transition duration-300"
+          >
+            <!-- Project Image -->
+            <div
+              class="relative h-48 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden flex items-center justify-center"
+            >
+              <div class="text-center text-gray-400 group-hover:scale-110 transition duration-500">
+                <svg class="w-16 h-16 mx-auto mb-2 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                </svg>
+                <p class="text-sm">Social Dashboard</p>
+              </div>
+            </div>
+
+            <!-- Project Content -->
+            <div class="p-6">
+              <h3
+                class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition"
+              >
+                Social Media Dashboard
+              </h3>
+              <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                An interactive dashboard for managing multiple social media accounts with analytics, scheduling, and real-time notifications integration.
+              </p>
+
+              <!-- Tech Stack -->
+              <div class="mb-6">
+                <p
+                  class="text-xs text-gray-500 uppercase tracking-wider mb-3 font-semibold"
+                >
+                  Tech Stack
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-cyan-500 bg-opacity-10 text-cyan-300 text-xs rounded border border-cyan-500 border-opacity-30">React</span>
+                  <span class="px-3 py-1 bg-cyan-500 bg-opacity-10 text-cyan-300 text-xs rounded border border-cyan-500 border-opacity-30">Node.js</span>
+                  <span class="px-3 py-1 bg-cyan-500 bg-opacity-10 text-cyan-300 text-xs rounded border border-cyan-500 border-opacity-30">MongoDB</span>
+                </div>
+              </div>
+
+              <!-- View Project Link -->
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 text-cyan-400 font-semibold text-sm hover:text-cyan-300 transition group/link"
+              >
+                View Project
+                <svg
+                  class="w-4 h-4 group-hover/link:translate-x-1 transition"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 6: Fitness Tracker App -->
+          <div
+            class="group card-glass overflow-hidden hover:border-cyan-400 transition duration-300"
+          >
+            <!-- Project Image -->
+            <div
+              class="relative h-48 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden flex items-center justify-center"
+            >
+              <div class="text-center text-gray-400 group-hover:scale-110 transition duration-500">
+                <svg class="w-16 h-16 mx-auto mb-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+                <p class="text-sm">Fitness Tracker</p>
+              </div>
+            </div>
+
+            <!-- Project Content -->
+            <div class="p-6">
+              <h3
+                class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition"
+              >
+                Fitness Tracker App
+              </h3>
+              <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                A comprehensive fitness tracking application with workout logging, progress analytics, goal setting, and social challenges for motivation.
+              </p>
+
+              <!-- Tech Stack -->
+              <div class="mb-6">
+                <p
+                  class="text-xs text-gray-500 uppercase tracking-wider mb-3 font-semibold"
+                >
+                  Tech Stack
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-cyan-500 bg-opacity-10 text-cyan-300 text-xs rounded border border-cyan-500 border-opacity-30">React Native</span>
+                  <span class="px-3 py-1 bg-cyan-500 bg-opacity-10 text-cyan-300 text-xs rounded border border-cyan-500 border-opacity-30">Firebase</span>
+                  <span class="px-3 py-1 bg-cyan-500 bg-opacity-10 text-cyan-300 text-xs rounded border border-cyan-500 border-opacity-30">Chart.js</span>
+                </div>
+              </div>
+
+              <!-- View Project Link -->
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 text-cyan-400 font-semibold text-sm hover:text-cyan-300 transition group/link"
+              >
+                View Project
+                <svg
+                  class="w-4 h-4 group-hover/link:translate-x-1 transition"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900 to-slate-950"
+    >
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl md:text-6xl font-bold mb-4">
+            <span class="gradient-text">Let's Connect</span>
+          </h2>
+          <p class="text-gray-400 text-lg">
+            Reach out to me through any of these platforms. I'd love to hear
+            from you!
+          </p>
+        </div>
+
+        <div class="card-glass p-12">
+          <div class="flex flex-col gap-8">
+            <!-- Social Links Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <!-- Gmail -->
+              <a
+                href="mailto:your-email@gmail.com"
+                class="group flex flex-col items-center gap-3 p-6 rounded-lg bg-slate-800 bg-opacity-50 hover:bg-opacity-100 transition duration-300 border border-slate-700 hover:border-red-500"
+              >
+                <div
+                  class="p-3 bg-red-500 bg-opacity-10 rounded-lg group-hover:bg-opacity-20 transition"
+                >
+                  <svg
+                    class="w-6 h-6 text-red-400"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-sm font-semibold text-gray-200">Gmail</span>
+              </a>
+
+              <!-- GitHub -->
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group flex flex-col items-center gap-3 p-6 rounded-lg bg-slate-800 bg-opacity-50 hover:bg-opacity-100 transition duration-300 border border-slate-700 hover:border-gray-400"
+              >
+                <div
+                  class="p-3 bg-gray-700 bg-opacity-30 rounded-lg group-hover:bg-opacity-50 transition"
+                >
+                  <svg
+                    class="w-6 h-6 text-gray-300"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-sm font-semibold text-gray-200">GitHub</span>
+              </a>
+
+              <!-- Facebook -->
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group flex flex-col items-center gap-3 p-6 rounded-lg bg-slate-800 bg-opacity-50 hover:bg-opacity-100 transition duration-300 border border-slate-700 hover:border-blue-500"
+              >
+                <div
+                  class="p-3 bg-blue-600 bg-opacity-20 rounded-lg group-hover:bg-opacity-30 transition"
+                >
+                  <svg
+                    class="w-6 h-6 text-blue-400"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-sm font-semibold text-gray-200"
+                  >Facebook</span
+                >
+              </a>
+
+              <!-- Instagram -->
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group flex flex-col items-center gap-3 p-6 rounded-lg bg-slate-800 bg-opacity-50 hover:bg-opacity-100 transition duration-300 border border-slate-700 hover:border-pink-500"
+              >
+                <div
+                  class="p-3 bg-gradient-to-r from-pink-500 to-orange-400 bg-opacity-20 rounded-lg group-hover:bg-opacity-30 transition"
+                >
+                  <svg
+                    class="w-6 h-6 text-pink-400"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.117.6c-.77.3-1.417.72-2.049 1.35-.63.632-1.05 1.28-1.35 2.05-.266.79-.467 1.66-.527 2.938C.04 8.333.025 8.74.025 12c0 3.26.015 3.667.072 4.947.06 1.277.261 2.148.527 2.938.3.77.72 1.417 1.35 2.049.632.63 1.28 1.05 2.05 1.35.79.266 1.66.467 2.938.527C8.333 23.96 8.74 23.975 12 23.975s3.667-.015 4.947-.072c1.277-.06 2.148-.261 2.938-.527.77-.3 1.417-.72 2.049-1.35.63-.632 1.05-1.28 1.35-2.05.266-.79.467-1.66.527-2.938.048-1.28.063-1.687.063-4.947s-.015-3.667-.072-4.947c-.06-1.277-.261-2.148-.527-2.938-.3-.77-.72-1.417-1.35-2.049-.632-.63-1.28-1.05-2.05-1.35-.79-.266-1.66-.467-2.938-.527C15.667.048 15.26.025 12.025 12zm0 2.432c3.003 0 3.362.012 4.547.066 1.097.05 1.692.228 2.087.378.524.204.898.478 1.291.87.392.393.666.767.87 1.291.15.395.327.99.377 2.087.054 1.185.066 1.544.066 4.547s-.012 3.362-.066 4.547c-.05 1.097-.228 1.692-.378 2.087-.204.524-.478.898-.87 1.291-.393.392-.767.666-1.291.87-.395.15-.99.327-2.087.377-1.185.054-1.544.066-4.547.066s-3.362-.012-4.547-.066c-1.097-.05-1.692-.228-2.087-.378-.524-.204-.898-.478-1.291-.87-.392-.393-.666-.767-.87-1.291-.15-.395-.327-.99-.377-2.087-.054-1.185-.066-1.544-.066-4.547s.012-3.362.066-4.547c.05-1.097.228-1.692.378-2.087.204-.524.478-.898.87-1.291.393-.392.767-.666 1.291-.87.395-.15.99-.327 2.087-.377 1.185-.054 1.544-.066 4.547-.066l.003.003z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-sm font-semibold text-gray-200"
+                  >Instagram</span
+                >
+              </a>
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-700 px-4 sm:px-6 lg:px-8 py-12">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="text-gray-400 text-center md:text-left mb-6 md:mb-0">
+            <p>&copy; 2025 Chad RV G. Abcede. All rights reserved.</p>
+          </div>
+          <div class="flex space-x-6">
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:accent-color transition"
+            >
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:accent-color transition"
+            >
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.249-.129.597-.129.946v5.441h-3.554s.05-8.807 0-9.726h3.554v1.375c.427-.659 1.191-1.594 2.897-1.594 2.117 0 3.704 1.385 3.704 4.362v5.583zM5.337 9.432c-1.144 0-1.915-.757-1.915-1.704 0-.957.767-1.703 1.96-1.703 1.192 0 1.914.746 1.938 1.703 0 .947-.746 1.704-1.983 1.704zm1.581 11.02H3.819V9.726h3.099v10.726zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:accent-color transition"
+            >
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M23.953 4.57a10 10 0 002.856-3.915 10.019 10.019 0 01-2.8.856 4.958 4.958 0 002.165-2.724c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Chatbox Widget -->
+    <div id="chatbot-container" class="fixed bottom-4 right-4 z-40">
+      <!-- Chatbot Button -->
+      <button
+        id="chatbot-btn"
+        class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition duration-300 flex items-center justify-center w-14 h-14"
+        title="Open Chatbox"
+      >
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"
+          />
+        </svg>
+      </button>
+
+      <!-- Chatbox Window -->
+      <div
+        id="chatbot-window"
+        class="hidden absolute bottom-20 right-0 w-96 bg-slate-900 border border-slate-700 rounded-lg shadow-2xl flex flex-col"
+        style="height: 500px"
+      >
+        <!-- Header -->
+        <div
+          class="bg-gradient-to-r from-cyan-600 to-blue-600 px-4 py-4 rounded-t-lg flex justify-between items-center"
+        >
+          <h3 class="text-lg font-bold text-white">EchoRV</h3>
+          <button
+            id="chatbot-close"
+            class="text-white hover:text-gray-200 transition"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Messages Area -->
+        <div id="chatbot-messages" class="flex-1 overflow-y-auto p-4 space-y-4">
+          <div class="flex justify-start">
+            <div
+              class="bg-slate-800 text-gray-100 rounded-lg px-4 py-2 max-w-xs"
+            >
+              Hi there! 👋 I'm Chad's chatbot. How can I help you today?
+            </div>
+          </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="border-t border-slate-700 p-4 flex gap-2">
+          <input
+            id="chatbot-input"
+            type="text"
+            placeholder="Type your message..."
+            class="flex-1 bg-slate-800 text-white px-4 py-2 rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none transition"
+          />
+          <button
+            id="chatbot-send"
+            class="bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg transition duration-300 flex items-center justify-center"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M16.6915026,12.4744748 L3.50612381,13.2599618 C3.19218622,13.2599618 3.03521743,13.4170592 3.03521743,13.5741566 L1.15159189,20.0151496 C0.8376543,20.8006365 0.99,21.89 1.77946707,22.52 C2.41,22.99 3.50612381,23.1 4.13399899,22.8429026 L21.714504,14.0454487 C22.6563168,13.5741566 23.1272231,12.6315722 22.9702544,11.6889879 L4.13399899,1.16346276 C3.34915502,0.9 2.40734225,0.9 1.77946707,1.4714506 C0.994623095,2.04290114 0.837654326,3.0851909 1.15159189,3.87077203 L3.03521743,10.3117651 C3.03521743,10.4688624 3.03521743,10.62596238 3.50612381,10.62596238 L16.6915026,11.4114493 C16.6915026,11.4114493 17.1624089,11.4114493 17.1624089,11.9827999 C17.1624089,12.4744748 16.6915026,12.4744748 16.6915026,12.4744748 Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Contact Form Handler (only if form exists)
+      const contactForm = document.getElementById("contactForm");
+      if (contactForm) {
+        const successMessage = document.getElementById("successMessage");
+        const errorMessage = document.getElementById("errorMessage");
+        const successText = document.getElementById("successText");
+        const errorText = document.getElementById("errorText");
+
+        contactForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          // Reset messages
+          successMessage.classList.add("hidden");
+          errorMessage.classList.add("hidden");
+
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const message = document.getElementById("message").value;
+
+          try {
+            const response = await fetch("/api/contact", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ name, email, message }),
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+              successText.textContent = data.message;
+              successMessage.classList.remove("hidden");
+              contactForm.reset();
+            } else {
+              errorText.textContent =
+                data.error || "An error occurred. Please try again.";
+              errorMessage.classList.remove("hidden");
+            }
+          } catch (error) {
+            errorText.textContent = "Network error. Please try again later.";
+            errorMessage.classList.remove("hidden");
+          }
+        });
+      }
+
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      mobileMenuBtn.addEventListener("click", () => {
+        // Add mobile menu functionality if needed
+        console.log("Mobile menu clicked");
+      });
+
+      // Chatbox Functionality
+      const chatbotBtn = document.getElementById("chatbot-btn");
+      const chatbotWindow = document.getElementById("chatbot-window");
+      const chatbotClose = document.getElementById("chatbot-close");
+      const chatbotInput = document.getElementById("chatbot-input");
+      const chatbotSend = document.getElementById("chatbot-send");
+      const chatbotMessages = document.getElementById("chatbot-messages");
+
+      console.log("Chatbot elements:", {
+        chatbotBtn,
+        chatbotWindow,
+        chatbotClose,
+        chatbotInput,
+        chatbotSend,
+        chatbotMessages,
+      });
+
+      // Toggle chatbot window
+      chatbotBtn.addEventListener("click", () => {
+        console.log("Chatbot button clicked");
+        chatbotWindow.classList.toggle("hidden");
+        if (!chatbotWindow.classList.contains("hidden")) {
+          chatbotInput.focus();
+        }
+      });
+
+      chatbotClose.addEventListener("click", () => {
+        console.log("Chatbot close clicked");
+        chatbotWindow.classList.add("hidden");
+      });
+
+      // Send message function
+      async function sendMessage() {
+        const message = chatbotInput.value.trim();
+        if (!message) return;
+
+        // Add user message to chat
+        const userMessageDiv = document.createElement("div");
+        userMessageDiv.className = "flex justify-end";
+        userMessageDiv.innerHTML = `<div class="bg-cyan-600 text-white rounded-lg px-4 py-2 max-w-xs">${escapeHtml(
+          message
+        )}</div>`;
+        chatbotMessages.appendChild(userMessageDiv);
+
+        chatbotInput.value = "";
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+
+        try {
+          // Send message to backend
+          const response = await fetch("/api/chat", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ message: message }),
+          });
+
+          const data = await response.json();
+
+          // Get the bot response (Flowise returns either 'text' or 'answer')
+          const botReply = data.text || data.answer || data.message || "No response received";
+
+          // Add bot response to chat
+          const botMessageDiv = document.createElement("div");
+          botMessageDiv.className = "flex justify-start";
+          botMessageDiv.innerHTML = `<div class="bg-slate-800 text-gray-100 rounded-lg px-4 py-2 max-w-xs">${escapeHtml(
+            botReply
+          )}</div>`;
+          chatbotMessages.appendChild(botMessageDiv);
+
+          chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        } catch (error) {
+          console.error("Error sending message:", error);
+          const errorDiv = document.createElement("div");
+          errorDiv.className = "flex justify-start";
+          errorDiv.innerHTML = `<div class="bg-red-800 text-red-100 rounded-lg px-4 py-2 max-w-xs">Sorry, something went wrong. Please try again.</div>`;
+          chatbotMessages.appendChild(errorDiv);
+          chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+      }
+
+      // Send message on button click
+      chatbotSend.addEventListener("click", sendMessage);
+
+      // Send message on Enter key
+      chatbotInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          sendMessage();
+        }
+      });
+
+      // Helper function to escape HTML
+      function escapeHtml(text) {
+        const div = document.createElement("div");
+        div.textContent = text;
+        return div.innerHTML;
+      }
+    </script>
+  </body>
+</html>
